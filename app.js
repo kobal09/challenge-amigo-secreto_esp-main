@@ -11,12 +11,15 @@ let $_liganador = "";
 function agregarAmigo() {
     let contenido = $_txt.value;
 
-    if (contenido === '') {
+    if (contenido.trim() === '') {
         return alert('no puedes ingresar una caja vacia');
     } else {
         listaAmigos.push(contenido);
+        $_txt.value = "";
     } 
-    mostrarAmigos(listaAmigos);            
+    mostrarAmigos(listaAmigos);     
+    //contenido = "";       
+    
 }
 
 function mostrarAmigos(listaAmigos) {
